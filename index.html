@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CGPA Dean's List Checker</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div class="container">
+        <h1>Semester Dean's List Eligibility Checker</h1>
+        <p class="subtitle">Check student eligibility for Dean's List</p>
+
+        <!-- Add Student Form -->
+        <div class="form-section">
+            <h2>Add Student Record</h2>
+            <form id="studentForm">
+                <div class="form-group">
+                    <label for="studentName">Student Name:</label>
+                    <input type="text" id="studentName" placeholder="Enter student name" required>
+                </div>
+
+                <div class="form-group">
+                    <label for="creditHours">Credit Hours Taken (e.g., 12):</label>
+                    <input type="number" id="creditHours" placeholder="Enter credit hours" min="0" max="30" required>
+                    <p class="info-text">Minimum 15 credit hours required for Dean's List</p>
+                </div>
+
+                <div class="form-group">
+                    <label for="currentGPA">Current GPA (e.g., 3.65):</label>
+                    <input type="number" id="currentGPA" placeholder="Enter GPA" min="0" max="4" step="0.01" required>
+                    <p class="info-text">Minimum 3.50 GPA required for Dean's List</p>
+                </div>
+
+                <button type="submit" class="btn btn-primary">Check Eligibility & Add</button>
+            </form>
+        </div>
+
+        <!-- Results Section -->
+        <div class="output-box">
+            <h2>Section 03 Results</h2>
+            <div id="resultsContainer"></div>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
